@@ -1,0 +1,21 @@
+.nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 6vh;
+  background-color: cornsilk;
+  color: black;
+}
+
+.nav ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  width: 50%;
+}
+
+
+.nav li:hover{
+  background: #ddd;
+}

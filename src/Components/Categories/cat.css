@@ -1,0 +1,8 @@
+
+  .CatContener{
+    display: grid;
+  grid-template-columns: repeat(7, auto);
+  height: 90vh;
+  background: #ddd;
+
+  }

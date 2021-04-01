@@ -1,0 +1,39 @@
+.mealsContener{
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  padding: 30px 40px;
+  height: 90vh;
+  background: #ddd;
+}
+
+.mealContener{
+  width: 170px;
+  height: 170px;
+}
+img {
+  width: 170px;
+  height: 170px;
+  margin-top: 10px;
+  border: 2px solid black ;
+}
+
+img:hover {
+  background-color: antiquewhite;
+}
+
+h4 {
+  margin:0 auto;
+  font-size:18px; 
+  color:#492F18;
+  font-weight: bold; 
+  /*background-color: white;*/
+}
+
+
+.CatContener{
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  padding: 30px 40px;
+  height: 90vh;
+  background: #ddd;
+}
