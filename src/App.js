@@ -2,6 +2,7 @@ import {BrowserRouter as Router,Route} from 'react-router-dom'
 
 
 import Categories from "./Components/Categories/Categories.Component";
+import CategoryMeals from './Components/Category/CategoryMeals.Component';
 import Footer from "./Components/Footer/Footer.component";
 import GetMeal from './Components/GetMeal/GetMeal.Component';
 import MainPage from "./Components/MainPage/MainPage.component";
@@ -17,6 +18,7 @@ function App() {
       <Route path='/'exact component={MainPage}/>
       <Route path='/categories' exact component={Categories}/>
       <Route path='/meal/:id' exact component={GetMeal}/>
+      <Route path='/categories/:categoty' component={CategoryMeals}/>
       </Router>
       <Footer/>
     </div>

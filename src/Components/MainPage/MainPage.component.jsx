@@ -14,7 +14,7 @@ export default function MainPage() {
     const arr=[]
     for(let i=0;i<10;i++){
       const res = await API.get('/random.php')
-    arr.push(res.data.meals[0])
+        arr.push(res.data.meals[0])
     }
     console.log(arr);
     SetData(arr)
