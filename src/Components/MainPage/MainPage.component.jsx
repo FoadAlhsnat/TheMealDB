@@ -9,7 +9,9 @@ export default function MainPage() {
     feathdata()
   }, [])
 
-
+useEffect(()=>{
+  console.log('render');
+},[data])
   const feathdata = async () => {
     const arr = []
     for (let i = 0; i < 15; i++) {
@@ -28,16 +30,17 @@ export default function MainPage() {
         }
       }
       if (flag === 0) {
+        arr[i].isSaved=false
         temp.push(arr[i])
       }
     }
-    console.log(temp);
+    console.table(temp);
     SetData(temp)
   }
 
   return (
     <div className="mealsContener">
-      <MapReults data={data} sender='meal' />
+      <MapReults data={data} sender='meal' setData={SetData} />
     </div>
   )
 }
