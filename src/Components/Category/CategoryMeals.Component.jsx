@@ -11,18 +11,19 @@ export default function CategoryMeals() {
   const [mealsperpage] = useState(10)
   useEffect(() => {
     feachData()
+    // eslint-disable-next-line
   }, [])
 
-  
+
   let indexOflLastPost = currentpage * mealsperpage
   const indexOfFirstPost = indexOflLastPost - mealsperpage
-  if(indexOflLastPost>data.length){
-    indexOflLastPost=data.length;
+  if (indexOflLastPost > data.length) {
+    indexOflLastPost = data.length;
   }
   //indexOflLastPost=indexOflLastPost>data.length?data.length:indexOflLastPost
   //const indexOfFirstPost = indexOflLastPost - mealsperpage
   const currentmeals = data.slice(indexOfFirstPost, indexOflLastPost);
-  console.log('indexOfFirstPost='+indexOfFirstPost+' indexOflLastPost='+indexOflLastPost);
+  console.log('indexOfFirstPost=' + indexOfFirstPost + ' indexOflLastPost=' + indexOflLastPost);
 
   const paginate = (number) => {
     seCurrentpage(number)
@@ -35,9 +36,11 @@ export default function CategoryMeals() {
     console.log(res.data.meals);
   }
   return (
-    <div className='mealsContener'>
-      <MapReults data={currentmeals} sender={'meal'} />
+    <>
+      <div className='mealsContener'>
+        <MapReults data={currentmeals} sender={'meal'} />
+      </div>
       <Pagination mealsPerPage={mealsperpage} totalmeals={data.length} paginate={paginate} />
-    </div>
+    </>
   )
 }

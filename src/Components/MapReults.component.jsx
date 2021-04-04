@@ -1,16 +1,16 @@
 import React from 'react'
 import {Link}from 'react-router-dom'
 export default function MapReults({data,sender}) {
-  const addtolocal=()=>{
+  // const addtolocal=()=>{
     
-    if( localStorage.getItem('meals')){
-      console.log(localStorage.getItem('meals'));
-    }
-    else{
-      console.log('not');
-    }
+  //   if( localStorage.getItem('meals')){
+  //     console.log(localStorage.getItem('meals'));
+  //   }
+  //   else{
+  //     console.log('not');
+  //   }
 
-  }
+  // }
   const RenderDAta=()=>{
     if(data===null) return  <>loadeng</>;
     if(sender==='meal'){

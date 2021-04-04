@@ -11,19 +11,33 @@ export default function MainPage() {
 
 
   const feathdata = async () => {
-    const arr=[]
-    for(let i=0;i<10;i++){
+    const arr = []
+    for (let i = 0; i < 15; i++) {
       const res = await API.get('/random.php')
-        arr.push(res.data.meals[0])
+      arr.push(res.data.meals[0])
     }
-    console.log(arr);
-    SetData(arr)
+
+    let temp = []
+    let flag
+    for (let i = 0, f = 0; f < 10 && i < arr.length; i++, f++) {
+      flag = 0
+      for (let j = 0; j < temp.length; j++) {
+        if (arr[i].idMeal === temp[j].idMeal) {
+          f--;
+          flag = 1;
+        }
+      }
+      if (flag === 0) {
+        temp.push(arr[i])
+      }
+    }
+    console.log(temp);
+    SetData(temp)
   }
 
   return (
     <div className="mealsContener">
-      {/* <MapResult /> */}
-      <MapReults data={data} sender='meal'/>
+      <MapReults data={data} sender='meal' />
     </div>
   )
 }

@@ -4,15 +4,16 @@ import Api from '../Api/Api';
 
 export default function GetMeal(props) {
   const [data,setData]=useState(null)
-  const [ingredient, setIngredient] = useState(null)
+  //const [ingredient, setIngredient] = useState(null)
   const params = useParams();
   useEffect(() => {
     feachData()
-    fershEntries()
+    // eslint-disable-next-line
   }, [])
 
   useEffect(()=>{
     fershEntries()
+    // eslint-disable-next-line
   },[data])
 
   const feachData=async()=>{
