@@ -1,0 +1,27 @@
+.meal-content{
+  width: 75vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+
+.video{
+  margin: 0 auto;
+  /* padding-bottom:10px ; */
+  width: 75%;
+  height: 50vh;
+}
+
+.video iframe{
+  width: 100%;
+  height: 100%;
+}
+
+.meal-content ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

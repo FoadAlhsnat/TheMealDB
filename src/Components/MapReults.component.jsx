@@ -31,7 +31,7 @@ let filter=data.map(item=>{
   const removefromlocal = (mealtoremove) => {
     console.log(window.location.href);
     let meals = JSON.parse(localStorage.getItem('saved'))
-    if(window.location.href==='http://localhost:3000/'||window.location.href==='https://foadmealdb.netlify.app/'){
+    if(window.location.href==='http://localhost:3001/'||window.location.href==='https://foadmealdb.netlify.app/'){
       meals = meals.filter(meal => meal.idMeal !== mealtoremove.idMeal)
       let filter=data.map(item=>{
         if(item.idMeal===mealtoremove.idMeal){
