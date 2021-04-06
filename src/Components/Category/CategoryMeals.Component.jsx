@@ -15,19 +15,12 @@ export default function CategoryMeals() {
   }, [])
 
 
-  let indexOflLastPost = currentpage * mealsperpage
-  const indexOfFirstPost = indexOflLastPost - mealsperpage
-  if (indexOflLastPost > data.length) {
-    indexOflLastPost = data.length;
-  }
-  //indexOflLastPost=indexOflLastPost>data.length?data.length:indexOflLastPost
-  //const indexOfFirstPost = indexOflLastPost - mealsperpage
-  const currentmeals = data.slice(indexOfFirstPost, indexOflLastPost);
-  console.log('indexOfFirstPost=' + indexOfFirstPost + ' indexOflLastPost=' + indexOflLastPost);
+  const indexOflLastmeal = currentpage * mealsperpage
+  const indexOfFirstmeal = indexOflLastmeal - mealsperpage
+  const currentmeals = data.slice(indexOfFirstmeal, indexOflLastmeal);
 
   const paginate = (number) => {
     seCurrentpage(number)
-
   }
 
   const feachData = async () => {
