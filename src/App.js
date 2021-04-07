@@ -6,8 +6,6 @@ import GetMeal from './Components/GetMeal/GetMeal.Component';
 import MainPage from "./Components/MainPage/MainPage.component";
 import Nav from "./Components/NavBar/Nav.Component";
 import Saved from './Components/Saved/Saved.component';
-
-
 import './style.css'
 
 function App() {
@@ -22,6 +20,8 @@ function App() {
       <Route path='/saved' component={Saved}/>
       </Router>
       <Footer/>
+
+   
     </div>
   );
 }

@@ -1,0 +1,26 @@
+.absolute input{
+  width: 20rem;
+  margin-top: 18px;
+  border: 3px solid #5d7375;
+  padding: 10px;
+  height: 20px;
+  border-radius: 5px ;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.absolute{
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.contener{
+  background: #dde;
+}
+
+.item{
+  padding: 5px;
+  border: 1px solid black;
+  color: black;
+}

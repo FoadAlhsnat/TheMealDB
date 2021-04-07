@@ -1,6 +1,8 @@
 import React from 'react'
 import './Nav.css'
+
 import {Link}from 'react-router-dom'
+import SearchBar from '../SearchBar/SearchBar.component'
 
 export default function Nav() {
   return (
@@ -15,6 +17,7 @@ export default function Nav() {
       <Link to='/saved'>
       <li>saved</li>
       </Link>
+      <SearchBar/>
     </ul>
   </div>
   )
